@@ -1,0 +1,51 @@
+programa
+{
+	funcao inicio ()
+	{
+		// variaveis 
+		real s1, s2, d3
+		cadeia p1 
+		
+		s1= 600
+		
+		// primeira interação 
+		
+		escreva("Escolha uma operação (sacar, depositar, conferir): ")
+		leia(p1)
+		
+		// mecanismo 1 
+		
+		escolha(p1){
+			caso "sacar":
+			escreva("Quanto deseja sacar ? ") 
+			leia(s2)
+			
+			se (s2 > s1)
+		escreva("Saldo insuficiente")
+		
+		senao
+		escreva("Seu saldo atual é: ",s1-s2)
+		
+			pare
+			
+			caso "depositar":
+			escreva("Quanto deseja depositar ? ")
+			leia(d3)
+			
+			se ( d3<0 )
+		escreva("Operação invalida")
+		
+		senao
+		escreva("Operação realizada com sucesso, seu saldo atual é: ",d3+s1)
+		
+			pare
+			
+			caso "conferir":
+			escreva("O seu saldo é de ",s1)
+			pare
+			caso contrario:
+			escreva("Digite alguma operação valida")
+			pare
+		}
+	}
+}
